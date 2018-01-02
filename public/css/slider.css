@@ -1,0 +1,34 @@
+#slider{
+            margin: 0 auto;
+            width: 100%;
+            height: 200px;
+            overflow:hidden;
+            background-color: black;
+        }
+    /*Valores de las imagenes*/
+        #slider img{
+            margin: 0 auto;
+            -moz-transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+            transition: opacity 2s;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+    /*Para que la primera imagen este activa al inicio*/
+        #slider img:nth-child(1){
+            opacity: 1;
+        }
+
+@media(min-width:768px){
+    #slider{
+        height: 300px;
+    }
+    
+    #slider img{
+        height: 300px;
+    }
+}
+

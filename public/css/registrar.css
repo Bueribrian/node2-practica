@@ -1,0 +1,71 @@
+
+
+#bloque-login{
+  
+
+}
+#bloque-login .contenedor{
+   width: 98%;
+    height: 450px;
+    background: deepskyblue;
+    border: 3px solid transparent;
+    position: absolute;
+    top:50px;
+    left:0px;
+    margin:30px 3px;
+}
+
+
+
+#bloque-login .contenedor form{
+    margin: 50px 10px;
+    
+    
+    
+    
+}
+#bloque-login .contenedor form h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+    
+}
+
+#bloque-login .contenedor form input{
+  display: block;
+    width: 98%;
+    margin: 10px 5px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 2px 2px;
+    background: rgba(0,0,0,0.8);
+    color:white;
+    
+}
+#bloque-login .contenedor form input::placeholder{
+    color:rgba(255,255,255,0.4);
+    padding: 10px 15px;
+    font-size: 15px;
+}
+#bloque-login .contenedor form input:focus{
+        border-color: white;
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+    color:white;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    bottom:0;
+}
+
+@media (min-width:1024px){
+    #bloque-login .contenedor{
+        width:50%;
+        margin: 40px 350px;
+    }
+    
+    #bloque-login .contenedor form{
+        width:70%;
+        margin: 40px 100px;
+    }
+}

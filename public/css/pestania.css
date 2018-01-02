@@ -1,0 +1,68 @@
+#pestania{
+    position: absolute;
+    width: 100%;
+    background: white;
+    height: 46px;
+    line-height: 45px;
+    margin-top:-60px;
+    top:250px;
+    padding: 0px 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    
+}
+
+#pestania .contenedor{
+   
+}
+
+#pestania .contenedor a{
+    display: inline-block;
+    text-decoration:none;
+    color:black;
+    font-size: 15px;
+    
+    margin: 0px 4px;
+    text-align: center;
+
+ 
+   
+}
+#pestania .contenedor a:hover{
+    
+    text-decoration: none;
+    color: black;
+    
+    background: deepskyblue;
+
+ 
+}
+
+@media (min-width:1024px){
+    #pestania{
+    width: 100%;    
+    margin-top: 100px;
+    }
+    #pestania div a{
+      width: 40%;
+      text-align-last: center;
+    margin:2px 2px;
+    }
+    }
+@media(min-width:768px){
+    #pestania div a{
+    margin:2px 2px;
+        width:32%;
+        text-align: center;
+        }
+    #pestania{
+        margin-top: 50px;
+    }
+}
+@media(min-width:316px){
+    #pestania div a{
+    margin:0px 5px;
+        padding: 0px 2px;
+        width:29%;
+        text-align: center;
+        }
+}
