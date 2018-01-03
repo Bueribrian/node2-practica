@@ -4,11 +4,18 @@ const mongoose=require("mongoose")
 const path=require("path")
 const exphbs=require("express-handlebars")
 const app = express()
+const passport=require("passport")
+const flash= require("connect-flash")
+const morgan= require("morgan")
+const cookieParser=require("cookie-parser")
+const session= require("express-session")
 
+require("./config/passport")(passport)
 
 app.use(express.static('public'))
 
 
+app.set('views', path.join(__dirname,'views'))
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 
@@ -19,39 +26,32 @@ mongoose.connect("mongodb://localhost/pictureswallet2", {
 
 }).then(() => console.log("db is connected")).catch(err => console.log(err))
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: false}))
+
 
 
 
 //////////////////////////////////////
 
-app.get("/",function(req,res){
-	res.render("home")
-})
 
 
 
-app.get('/login', function (req, res) {
-  res.render('login')
-})
+/////////////////////////////////////////////////
+app.use(morgan("dev"))
+app.use(cookieParser())
+app.use(session({
+	secret: '123456789',
+	resave: false,
+	saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
+app.use(flash())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 
-app.get('/registrar', function (req, res) {
-  res.render('registrar')
-})
+///////////////////////////////////////////////////
 
-app.get('/informacion', function (req, res) {
-  res.render('informacion')
-})
-
-app.get('/user', function (req, res) {
-  res.render('user')
-})
-
-
-
-
-
+require('./app/routes')(app,passport)
 
 
 
