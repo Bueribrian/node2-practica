@@ -37,6 +37,9 @@ header{
 h1{
     float: left;
 }
+.page{
+    font-size: 37px;
+}
 
 a h1 {
     font-style: none;
@@ -61,6 +64,7 @@ section{
 
 #titulo{
     text-align: center;
+    font-size: 20px;
 }
 h2{
     text-align: center;
@@ -116,3 +120,4 @@ footer .contenedor{
         justify-content: space-between;
     }
 }
+

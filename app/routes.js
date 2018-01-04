@@ -11,8 +11,8 @@ app.get('/login', function (req, res) {
   })
 })
 
-app.post("/login", passport.authenticate("local-signup",{
-	successRedirect: "/loginexitoso",
+app.post("/login", passport.authenticate("local-login",{
+	successRedirect: "/user",
 	failureRedirect:"/logincaca",
 	failureFlash: true,
 }))
@@ -23,8 +23,8 @@ app.get('/registrar', function (req, res) {
 })
 
 app.post("/registrar", passport.authenticate("local-signup",{
-	successRedirect: "/",
-	failureRedirect:"/registrar",
+	successRedirect: "/registrobien",
+	failureRedirect:"/registrocomoelorto",
 	failureFlash: true,
 }))
 //app.post("/registrar",passport.aunthenticate("local-signup")){
@@ -53,5 +53,15 @@ app.get("/loginexitoso",function(req,res){
 
 app.get("/logincaca",function(req,res){
 	res.send("login caca")
+})
+
+
+
+app.get("/registrobien",function(req,res){
+  res.send("registro bien")
+})
+
+app.get("/registrocomoelorto",function(req,res){
+  res.send("registrocomoelorto")
 })
 }
