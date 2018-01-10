@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="./css/fontello.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/nivo-lightbox.css">
+    <link rel="stylesheet" type="text/css" href="./css/themes/default/default.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+
 </head> 
     <body>
       {{> head this}}
@@ -20,26 +23,17 @@
                <a class="icon-pinterest-squared" href=""></a>
            </div>
        </div>
-      
+        
+
     </footer>
     <script src="./js/jquery.js"></script>
-    <script>
-               $('.galeria-imagen').click(function(e){
-              var img = e.target.src;
-              var visual = '<div class="visual" ><img src="'+ img + '" class="visual-imagen"><div class="visual-boton" >X</div><div id="boton-prev"><</div><div id="boton-next">></div></div>';
-              $('body').append(visual);
-              $('.visual-boton').click(function(){
-                $('.visual').remove();
-              })
-            });
-
-
-            $(document).keyup(function(e){
-              if (e.which==27) {
-                $('.visual').remove();
-              }
-            })
-               </script>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/nivo-lightbox.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('a').nivoLightbox();
+    });
+    </script>
     <script src="./js/slider.js"></script>
     <script type="text/javascript" src="./js/selector.js"></script>
     </body>

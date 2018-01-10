@@ -44,7 +44,7 @@ passport.use("local-signup",new LocalStrategy({
 },
 function(req, username, password,done){
 	User.findOne({"local.username":username},function(err,user){
-		if(err){return done(err)}
+		if(err){return done(err);}
 			if (user){
 				return done(null, false,req.flash("signupMessage","El usuario ya existe"))
 			}else{

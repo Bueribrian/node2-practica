@@ -1,0 +1,27 @@
+<header>
+                   <div class="contenedor">
+                       <a href="/"><h1 class="page" >Pictures Wallet</h1></a>
+                       <input type="checkbox" id="menu-bar">
+                       <label class="icon-menu" for="menu-bar"></label>
+                    <nav class="menu">
+                          <a href="/login">Entrar</a>
+                          <a href="/registrar">Registrarse</a>
+                          <a href="/informacion">Informacion</a>     
+                     </nav>
+                    </div>   
+               </header>
+<main>
+<h2>Sube tu foto</h1>
+<--!{{ typeof msg != "undefined" ?}}-->
+<br>
+<p>Las fotos no tiene que tener contenido grafico que dañe a terceros o de contenido delicado.</p>
+<br>
+<form action="/subir" method="post" enctype="multipart/form-data">
+<input type="text" require title="title" name="title" >
+<br>
+<input require type="file" title="image" value="Busca tu imagen" name="image">
+<br>
+<input type="submit" title="Subir">
+</form>
+
+</main>

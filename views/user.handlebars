@@ -4,9 +4,9 @@
                        <input type="checkbox" id="menu-bar">
                        <label class="icon-menu" for="menu-bar"></label>
                     <nav class="menu">
-                          <a href="">Subir una imagen</a>
-                          <a href="/usuario"> - Usuario - </a>
-                          <a href="/informacion">Informacion</a>     
+                          <a href="/subir">Subir una imagen</a>
+                          <a href="/usuario"><strong> - {{user.local.username}} -</strong> </a>
+                           <a href="/logout">Salir</a>    
                      </nav>
                     </div>   
                </header>
@@ -42,24 +42,8 @@
              <div class="visual-boton">X</div>
          </div>
 -->
-          <section id="sec-cuerpo">
-               <div id="cuerpo" >   
-                 <img class ="galeria-imagen"src="imagenes/1.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/10.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/11.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/12.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/13.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/14.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/DSC_0386.JPG" alt="">
-                 <img class ="galeria-imagen"src="imagenes/DSC_0329.JPG" alt="">
-                 <img class ="galeria-imagen"src="imagenes/DSC_0308.JPG" alt="">
-                 <img class ="galeria-imagen"src="imagenes/DSC_0269.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/DSC_0255.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/16.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/17.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/20.jpg" alt="">
-                 <img class ="galeria-imagen"src="imagenes/DSC_0141%202.jpg" alt="">
-                </div>
+          <section>
+               {{> cuerpo this}}
        </section>
         <!---cuerpo--> 
         <!---https://www.templatemonster.com/es/demo/59496.html-->    
