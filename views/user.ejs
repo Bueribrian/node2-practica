@@ -1,3 +1,4 @@
+<% include partials/head %>
 <header>
                    <div class="contenedor">
                        <a href="/user"><h1 class="page">Pictures Wallet</h1></a>
@@ -5,7 +6,7 @@
                        <label class="icon-menu" for="menu-bar"></label>
                     <nav class="menu">
                           <a href="/subir">Subir una imagen</a>
-                          <a href="/usuario"><strong> - {{user.local.username}} -</strong> </a>
+                          <a href="/profile"><strong><%= user.local.username %></strong></a>  
                            <a href="/logout">Salir</a>    
                      </nav>
                     </div>   
@@ -32,19 +33,17 @@
          <!-- pestaña de seleccion-->      
           <!--titulo-->                         
            <section id="titulo">
+           <%= typeof msg != "undefined" ? msg: "" %>
+
              <h2>Bienvenido a Pictures Wallet una web para subir tus imagenes favoritas facil y rapido</h2>
            </section>
           <!--titulo--> 
         <!--cuerpo-->
-<!--
-         <div class="visual">
-            <img class="visual-imagen" src="imagenes/11.jpg" alt="">
-             <div class="visual-boton">X</div>
-         </div>
--->
           <section>
-               {{> cuerpo this}}
+               <% include partials/cuerpo %>
        </section>
         <!---cuerpo--> 
         <!---https://www.templatemonster.com/es/demo/59496.html-->    
    </main>  
+
+<% include partials/footer %>

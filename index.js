@@ -16,8 +16,7 @@ const session= require("express-session")
 require("./config/passport")(passport)
 app.use(express.static('public'))
 app.set('views', path.join(__dirname,'views'))
-app.engine('handlebars', exphbs({defaultLayout: 'main'}))
-app.set('view engine', 'handlebars')
+app.set('view engine', 'ejs')
 mongoose.Promise=global.Promise;
 mongoose.connect("mongodb://localhost/pictureswallet2", {
 	useMongoClient: true

@@ -15,7 +15,7 @@ app.get('/login', function (req, res) {
 })
 
 app.post('/login', passport.authenticate('local-login',{
-  successRedirect: '/perfil',
+  successRedirect: '/profile',
   failureRedirect:'/login',
   failureFlash: true,
 }))
@@ -45,6 +45,9 @@ app.get('/user', function (req, res) {
   })
 })
 
+app.get('/profile'), function(req,res){
+  res.render('profile')
+}
 
 /////////////Subir archivo////////////////
 const storage=multer.diskStorage({
@@ -99,7 +102,7 @@ upload(req,res,(err)=>{
     if(req.file== undefined){
       res.render("subir",{msg:"error: no file selected"})
     }else{
-      res.render('user',{msg:"File Uploaded"})
+      res.render('subir',{msg:"File Uploaded"})
     }
   }
 })
@@ -108,7 +111,7 @@ upload(req,res,(err)=>{
 
 
 ///////////////Perfil de usuario////////////////////
-app.get("/perfil", isLoggedIn,(req, res)=>{
+app.get("/profile", isLoggedIn,(req, res)=>{
   res.render("profile",{
     user:req.user
   })

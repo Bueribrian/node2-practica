@@ -1,0 +1,21 @@
+ <% include partials/head %>
+<header>
+                   <div class="contenedor">
+                       <a href="/user"><h1 class="page">Pictures Wallet</h1></a>
+                       <input type="checkbox" id="menu-bar">
+                       <label class="icon-menu" for="menu-bar"></label>
+                    <nav class="menu">
+                          <a href="/subir">Subir una imagen</a>
+                          <a href="/profile"><strong> <%= user.local.username %> </strong></a>
+                          <a href="/logout">Salir</a>     
+                     </nav>
+                    </div>   
+               </header>
+
+      <div id="usuario">
+      <p id="info-usuario">
+      <h2>Nombre de usuario : <%= user.local.username %></h2> 
+      <h2>Contraseña : <%= user.local.password %></h2>
+      </p>
+      </div>       
+     
